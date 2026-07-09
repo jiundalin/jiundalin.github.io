@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Jiun-Da Lin (林竣達) — Assistant Professor, Graduate Institute of National Development, National Taiwan University. Research on sustainable finance, climate governance, Chinese politics, and global governance.">
+<title>Jiun-Da Lin 林竣達 — National Taiwan University</title>
+<script>try{var l=localStorage.getItem('lang');if(l==='zh'){document.documentElement.setAttribute('data-lang','zh');document.documentElement.lang='zh-Hant'}}catch(e){}</script>
+<style>
+:root{
+  --paper:#faf9f6;
+  --paper-raise:#f2f1ec;
+  --ink:#20261f;
+  --muted:#606a5f;
+  --faint:#8a9187;
+  --hairline:#dfe2d9;
+  --accent:#2f6b4f;
+  --accent-soft:#e7efe8;
+  --seal:#9e2b25;
+  --seal-ink:#fdf9f4;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --paper:#161a16;
+    --paper-raise:#1d221d;
+    --ink:#e7eae3;
+    --muted:#a3aca0;
+    --faint:#78816f;
+    --hairline:#2c332b;
+    --accent:#8ec4a5;
+    --accent-soft:#22301f;
+    --seal:#b0473f;
+    --seal-ink:#f7ede4;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#161a16;
+  --paper-raise:#1d221d;
+  --ink:#e7eae3;
+  --muted:#a3aca0;
+  --faint:#78816f;
+  --hairline:#2c332b;
+  --accent:#8ec4a5;
+  --accent-soft:#22301f;
+  --seal:#b0473f;
+  --seal-ink:#f7ede4;
+}
+:root[data-theme="light"]{
+  --paper:#faf9f6;
+  --paper-raise:#f2f1ec;
+  --ink:#20261f;
+  --muted:#606a5f;
+  --faint:#8a9187;
+  --hairline:#dfe2d9;
+  --accent:#2f6b4f;
+  --accent-soft:#e7efe8;
+  --seal:#9e2b25;
+  --seal-ink:#fdf9f4;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *{transition:none !important;animation:none !important}
+}
+/* language switching */
+html[data-lang="zh"] .l-en{display:none !important}
+html:not([data-lang="zh"]) .l-zh{display:none !important}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Songti TC","Noto Serif TC",serif;
+  font-size:17px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+html[data-lang="zh"] body{line-height:1.85}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+
+/* ---- layout ---- */
+.frame{display:grid;grid-template-columns:300px minmax(0,1fr);min-height:100vh;max-width:1200px;margin:0 auto}
+.rail{
+  position:sticky;top:0;height:100vh;overflow-y:auto;
+  display:flex;flex-direction:column;
+  padding:48px 36px 40px 40px;
+  border-right:1px solid var(--hairline);
+}
+main{padding:56px 56px 80px 64px;max-width:860px}
+
+/* ---- rail ---- */
+.id-row{display:flex;align-items:flex-start;gap:14px;margin-bottom:20px}
+.portrait{
+  width:104px;height:104px;border-radius:6px;object-fit:cover;
+  border:1px solid var(--hairline);
+}
+.seal{
+  width:38px;height:38px;border-radius:4px;
+  background:var(--seal);color:var(--seal-ink);
+  display:grid;place-items:center;
+  font-size:14.5px;line-height:1.1;letter-spacing:1px;
+  font-family:"Songti TC","Noto Serif TC",serif;
+  writing-mode:vertical-rl;
+  user-select:none;
+}
+.lang-btn{
+  margin-left:auto;
+  padding:5px 12px;border:1px solid var(--hairline);border-radius:99px;
+  background:none;color:var(--muted);cursor:pointer;
+  font-size:12.5px;letter-spacing:1px;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang TC","Noto Sans TC",Helvetica,Arial,sans-serif;
+  transition:color .15s ease,border-color .15s ease;
+}
+.lang-btn:hover{color:var(--accent);border-color:var(--accent)}
+.rail h1{font-size:25px;font-weight:600;letter-spacing:.2px;line-height:1.25}
+.rail .zh-name{
+  display:block;font-family:"Songti TC","Noto Serif TC",serif;
+  font-size:29px;font-weight:600;letter-spacing:6px;margin-bottom:2px;
+}
+.rail .role{margin-top:12px;font-size:14px;color:var(--muted);line-height:1.6}
+.rail .role em{font-style:normal;color:var(--ink)}
+nav{margin-top:26px}
+nav a{
+  display:block;padding:5.5px 0;
+  font-size:12.5px;letter-spacing:2.2px;text-transform:uppercase;
+  color:var(--muted);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang TC","Noto Sans TC",Helvetica,Arial,sans-serif;
+  transition:color .15s ease;
+}
+html[data-lang="zh"] nav a{letter-spacing:4px;font-size:13.5px}
+nav a:hover{color:var(--accent);text-decoration:none}
+.rail-foot{margin-top:auto;padding-top:20px;font-size:14px;color:var(--muted);line-height:1.6}
+.rail-foot a{display:block;padding:2px 0}
+.cv-btn{
+  display:inline-block;margin-top:12px;padding:9px 18px;
+  border:1px solid var(--accent);border-radius:3px;
+  color:var(--accent);font-size:12.5px;letter-spacing:2px;text-transform:uppercase;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang TC","Noto Sans TC",Helvetica,Arial,sans-serif;
+  transition:background .15s ease,color .15s ease;
+}
+.cv-btn:hover{background:var(--accent);color:var(--paper);text-decoration:none}
+
+/* ---- sections ---- */
+section{padding:34px 0;border-bottom:1px solid var(--hairline)}
+section:first-of-type{padding-top:0}
+section:last-of-type{border-bottom:none}
+h2{
+  font-size:13px;font-weight:600;letter-spacing:3px;text-transform:uppercase;
+  color:var(--accent);margin-bottom:22px;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang TC","Noto Sans TC",Helvetica,Arial,sans-serif;
+}
+html[data-lang="zh"] h2{font-size:15px;letter-spacing:5px}
+h3{font-size:15px;font-weight:600;letter-spacing:.4px;margin:26px 0 12px;color:var(--ink)}
+h3:first-of-type{margin-top:0}
+p{max-width:65ch}
+p + p{margin-top:14px}
+.lede{font-size:19.5px;line-height:1.6;text-wrap:balance}
+html[data-lang="zh"] .lede{line-height:1.8}
+
+/* interest chips */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px;padding:0;list-style:none}
+.chips li{
+  padding:5px 13px;border-radius:99px;
+  background:var(--accent-soft);color:var(--accent);
+  font-size:13px;letter-spacing:.3px;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang TC","Noto Sans TC",Helvetica,Arial,sans-serif;
+}
+
+/* education / generic row list */
+.rows{list-style:none}
+.rows li{
+  display:flex;gap:24px;align-items:baseline;
+  padding:9px 0;border-top:1px solid var(--hairline);
+}
+.rows li:first-child{border-top:none}
+.rows .yr{
+  flex:0 0 92px;color:var(--faint);font-size:13.5px;
+  font-variant-numeric:tabular-nums;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+}
+.rows .what{flex:1}
+.rows .what small{display:block;color:var(--muted);font-size:14px}
+
+/* publications */
+.pubs{list-style:none}
+.pubs li{
+  position:relative;padding:14px 0;
+  border-top:1px solid var(--hairline);
+  max-width:70ch;
+}
+.pubs li:first-child{border-top:none}
+.pubs .authors{color:var(--muted);font-size:15px}
+.pubs .authors b{color:var(--ink);font-weight:600}
+.pubs .title{display:block;font-size:16.5px;line-height:1.55;margin:2px 0}
+.pubs .venue{font-size:15px;color:var(--muted)}
+.pubs .venue i{color:var(--ink)}
+.pubs .tag{
+  display:inline-block;margin-left:8px;padding:1px 8px;border-radius:99px;
+  font-size:11.5px;letter-spacing:1px;text-transform:uppercase;
+  background:var(--accent-soft);color:var(--accent);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang TC","Noto Sans TC",Helvetica,Arial,sans-serif;
+  vertical-align:1px;
+}
+
+/* contact */
+address{font-style:normal;line-height:1.8}
+address .zh{font-family:"Songti TC","Noto Serif TC",serif;color:var(--muted)}
+
+footer{margin-top:40px;font-size:13px;color:var(--faint)}
+
+/* ---- mobile ---- */
+@media (max-width: 860px){
+  .frame{display:block}
+  .rail{
+    position:static;height:auto;overflow:visible;border-right:none;
+    border-bottom:1px solid var(--hairline);
+    padding:36px 24px 26px;
+  }
+  nav{display:flex;flex-wrap:wrap;gap:2px 18px;margin-top:22px}
+  .rail-foot{margin-top:22px}
+  main{padding:36px 24px 64px}
+}
+</style>
+</head>
+<body>
+<div class="frame">
+
+  <aside class="rail">
+    <div class="id-row">
+      <img class="portrait" src="img/portrait.jpg" alt="Portrait of Jiun-Da Lin">
+      <div class="seal" aria-hidden="true">竣達</div>
+      <button class="lang-btn" id="langBtn" type="button" aria-label="Switch language">
+        <span class="l-en">中文</span><span class="l-zh">English</span>
+      </button>
+    </div>
+    <h1>
+      <span class="zh-name">林竣達</span>
+      Jiun-Da Lin
+    </h1>
+    <p class="role">
+      <span class="l-en">
+        Assistant Professor<br>
+        <em>Graduate Institute of National Development</em><br>
+        National Taiwan University
+      </span>
+      <span class="l-zh">
+        助理教授<br>
+        <em>國立臺灣大學 國家發展研究所</em>
+      </span>
+    </p>
+
+    <nav aria-label="Sections">
+      <a href="#about"><span class="l-en">About</span><span class="l-zh">關於</span></a>
+      <a href="#research"><span class="l-en">Research</span><span class="l-zh">研究</span></a>
+      <a href="#publications"><span class="l-en">Publications</span><span class="l-zh">著作</span></a>
+      <a href="#commentary"><span class="l-en">Commentary</span><span class="l-zh">政策評論</span></a>
+      <a href="#teaching"><span class="l-en">Teaching</span><span class="l-zh">教學</span></a>
+      <a href="#advising"><span class="l-en">Advising</span><span class="l-zh">學生指導</span></a>
+      <a href="#talks"><span class="l-en">Talks</span><span class="l-zh">學術報告</span></a>
+      <a href="#grants"><span class="l-en">Awards</span><span class="l-zh">獎助榮譽</span></a>
+      <a href="#service"><span class="l-en">Service</span><span class="l-zh">學術服務</span></a>
+      <a href="#contact"><span class="l-en">Contact</span><span class="l-zh">聯絡方式</span></a>
+    </nav>
+
+    <div class="rail-foot">
+      <a href="mailto:jdlin0510@ntu.edu.tw">jdlin0510@ntu.edu.tw</a>
+      <a class="cv-btn" href="cv/CV_JiunDaLin.pdf" download><span class="l-en">Download CV</span><span class="l-zh">下載 CV</span></a>
+    </div>
+  </aside>
+
+  <main>
+
+    <section id="about">
+      <p class="lede">
+        <span class="l-en">
+          I am a political scientist studying how states, markets, and transnational
+          actors govern the climate transition — with a focus on
+          <a href="#research">sustainable finance</a>, Chinese politics, and East Asia.
+        </span>
+        <span class="l-zh">
+          我是政治學者，研究國家、市場與跨國行動者如何治理氣候轉型——聚焦於<a href="#research">永續金融</a>、中國政治與東亞。
+        </span>
+      </p>
+      <p style="margin-top:20px">
+        <span class="l-en">
+          I am an Assistant Professor at the Graduate Institute of National Development,
+          National Taiwan University, a Faculty Affiliate of the Risk Society and Policy
+          Research Center, and an Affiliate Researcher at the Taiwan Social Resilience
+          Research Center. I received my Ph.D. in comparative politics and international
+          relations from the Department of Government and Politics, University of
+          Maryland, College Park. My research has appeared in
+          <i>Global Environmental Politics</i>, <i>Journal of Cleaner Production</i>,
+          <i>The Pacific Review</i>, and <i>Journal of East Asian Studies</i>, among others.
+        </span>
+        <span class="l-zh">
+          林竣達，國立臺灣大學國家發展研究所助理教授，臺大風險社會與政策研究中心研究員、臺灣韌性社會研究中心研究員。美國馬里蘭大學政治學博士（比較政治與國際關係），加州大學聖地牙哥分校國際關係與太平洋研究學院碩士。研究成果發表於
+          <i>Global Environmental Politics</i>、<i>Journal of Cleaner Production</i>、<i>The Pacific Review</i>、<i>Journal of East Asian Studies</i>、《人文及社會科學集刊》、《問題與研究》等期刊。
+        </span>
+      </p>
+
+      <h3><span class="l-en">Education</span><span class="l-zh">學歷</span></h3>
+      <ul class="rows">
+        <li><span class="yr">2021</span><span class="what">
+          <span class="l-en">Ph.D., Political Science<small>University of Maryland, College Park</small></span>
+          <span class="l-zh">政治學博士<small>美國馬里蘭大學（University of Maryland, College Park）</small></span>
+        </span></li>
+        <li><span class="yr">2015</span><span class="what">
+          <span class="l-en">M.P.I.A., International Economics<small>School of Global Policy and Strategy (IR/PS), UC San Diego</small></span>
+          <span class="l-zh">國際事務碩士（M.P.I.A.，國際經濟）<small>加州大學聖地牙哥分校 國際關係與太平洋研究學院</small></span>
+        </span></li>
+        <li><span class="yr">2010</span><span class="what">
+          <span class="l-en">M.A., Political Science<small>National Taiwan University</small></span>
+          <span class="l-zh">政治學碩士<small>國立臺灣大學</small></span>
+        </span></li>
+        <li><span class="yr">2007</span><span class="what">
+          <span class="l-en">B.A., Political Science<small>National Taiwan University</small></span>
+          <span class="l-zh">政治學學士<small>國立臺灣大學</small></span>
+        </span></li>
+      </ul>
+    </section>
+
+    <section id="research">
+      <h2><span class="l-en">Research</span><span class="l-zh">研究</span></h2>
+      <p>
+        <span class="l-en">
+          My current projects examine the comparative politics and global governance of
+          sustainable finance and artificial intelligence. An ongoing National Science
+          and Technology Council project combines quantitative and qualitative methods
+          to study the development of global sustainable finance, comparing Taiwan,
+          Japan, South Korea, and China.
+        </span>
+        <span class="l-zh">
+          目前的研究聚焦於永續金融與人工智慧的比較政治與全球治理。進行中的國科會計畫以量化及質化方法，研究全球永續金融的發展，並著重臺灣、日本、韓國與中國的個案比較。
+        </span>
+      </p>
+      <ul class="chips" aria-label="Research interests">
+        <li><span class="l-en">Sustainable finance</span><span class="l-zh">永續金融</span></li>
+        <li><span class="l-en">Climate policy</span><span class="l-zh">氣候政策</span></li>
+        <li><span class="l-en">Global environmental politics</span><span class="l-zh">全球環境政治</span></li>
+        <li><span class="l-en">Chinese politics</span><span class="l-zh">中國政治</span></li>
+        <li><span class="l-en">Transnational governance</span><span class="l-zh">跨國治理</span></li>
+        <li><span class="l-en">International political economy</span><span class="l-zh">國際政治經濟學</span></li>
+        <li><span class="l-en">AI governance</span><span class="l-zh">AI 治理</span></li>
+      </ul>
+
+      <h3><span class="l-en">Research Projects</span><span class="l-zh">研究計畫</span></h3>
+      <ul class="rows">
+        <li><span class="yr">2024–2027</span><span class="what">
+          <span class="l-en">Formation and Legitimation of Sustainable Finance<small>Principal Investigator · NSTC 113-2628-H-002-014</small></span>
+          <span class="l-zh">永續金融的形成與正當化<small>主持人 · 國科會 113-2628-H-002-014</small></span>
+        </span></li>
+        <li><span class="yr">2022–2024</span><span class="what">
+          <span class="l-en">Transnational Governance and State Capacity: A Comparative Study of Green Finance<small>Principal Investigator · NSTC 111-2410-H-002-273</small></span>
+          <span class="l-zh">跨國治理與國家能力：綠色金融的比較研究<small>主持人 · 國科會 111-2410-H-002-273</small></span>
+        </span></li>
+        <li><span class="yr">&nbsp;</span><span class="what">
+          <span class="l-en">Multiple and Just Net-Zero Transitions throughout International Supply Chains<small>Research team member</small></span>
+          <span class="l-zh">國際供應鏈中的多重與公正淨零轉型<small>研究團隊成員</small></span>
+        </span></li>
+      </ul>
+    </section>
+
+    <section id="publications">
+      <h2><span class="l-en">Publications</span><span class="l-zh">著作</span></h2>
+
+      <h3><span class="l-en">Peer-Reviewed Articles</span><span class="l-zh">期刊論文</span></h3>
+      <ol class="pubs" reversed>
+        <li>
+          <span class="authors">Yeonju Jung and <b>Jiun-Da Lin</b> (2026)</span>
+          <span class="title">Institutional Factors in China&rsquo;s Norm Contestation in Global Governance: International Regime Complexes of Peacebuilding and Climate Change</span>
+          <span class="venue"><i>The Pacific Review</i>, 39(1), 1&ndash;31</span>
+        </li>
+        <li>
+          <span class="authors"><b>Jiun-Da Lin</b> (2025)</span>
+          <span class="title">The Development of the ASEAN Taxonomy for Sustainable Finance: A Comparative Analysis</span>
+          <span class="venue"><i>Chinese (Taiwan) Yearbook of International Law and Affairs</i>, 42, 172&ndash;184</span>
+        </li>
+        <li>
+          <span class="l-en">
+            <span class="authors">Ling-hsuan Jao and <b>Jiun-Da Lin</b> (2025)</span>
+            <span class="title">China&rsquo;s Gray Zone Strategy in the Taiwan Strait: Power Transition, Threat Perceptions, and Deterrence</span>
+            <span class="venue"><i>Prospect Quarterly</i>, 26(2), 53&ndash;112<span class="tag">in Mandarin</span></span>
+          </span>
+          <span class="l-zh">
+            <span class="authors">饒聆瑄、<b>林竣達</b>（2025）</span>
+            <span class="title">中美競爭下灰色地帶理論與實踐</span>
+            <span class="venue">《遠景基金會季刊》，26(2)，53&ndash;111</span>
+          </span>
+        </li>
+        <li>
+          <span class="authors"><b>Jiun-Da Lin</b> (2024)</span>
+          <span class="title">Transnational Climate Governance and State Capacity: A Multilevel Analysis of Green Bond Certification</span>
+          <span class="venue"><i>Global Environmental Politics</i>, 24(4), 37&ndash;60</span>
+        </li>
+        <li>
+          <span class="authors"><b>Jiun-Da Lin</b> (2023)</span>
+          <span class="title">Explaining the Quality of Green Bonds in China</span>
+          <span class="venue"><i>Journal of Cleaner Production</i>, 406, 136893</span>
+        </li>
+        <li>
+          <span class="authors">Fang-Yi Huang and <b>Jiun-Da Lin</b> (2022)</span>
+          <span class="title">Women&rsquo;s Political Empowerment and Social Protection Responses to COVID-19</span>
+          <span class="venue"><i>Asia Pacific Journal of Social Work and Development</i>, 32(3)</span>
+        </li>
+        <li>
+          <span class="l-en">
+            <span class="authors">Fang-Yi Huang and <b>Jiun-Da Lin</b> (2021)</span>
+            <span class="title">Wobbled but Never Fell Down: The Development of the Affordable Care Act under the Trump Administration</span>
+            <span class="venue"><i>Journal of Social Sciences and Philosophy</i>, 33(4), 567&ndash;617<span class="tag">in Mandarin</span></span>
+          </span>
+          <span class="l-zh">
+            <span class="authors">黃芳誼、<b>林竣達</b>（2021）</span>
+            <span class="title">搖而不墜：論川普政權下歐巴馬健保的發展</span>
+            <span class="venue">《人文及社會科學集刊》，33(4)，567&ndash;617</span>
+          </span>
+        </li>
+        <li>
+          <span class="l-en">
+            <span class="authors"><b>Jiun-Da Lin</b> (2021)</span>
+            <span class="title">The Development of Voluntary Global Standards: The Perspective of Private Authority</span>
+            <span class="venue"><i>Wenti Yu Yanjiu (Issues &amp; Studies)</i>, 60(3), 74&ndash;114<span class="tag">in Mandarin</span></span>
+          </span>
+          <span class="l-zh">
+            <span class="authors"><b>林竣達</b>（2021）</span>
+            <span class="title">從私權威觀點看自願性全球標準的發展</span>
+            <span class="venue">《問題與研究》，60(3)，74&ndash;114</span>
+          </span>
+        </li>
+        <li>
+          <span class="l-en">
+            <span class="authors">Fang-Yi Huang and <b>Jiun-Da Lin</b> (2020)</span>
+            <span class="title">Americans&rsquo; Attitudes and Behaviors in Response to the COVID-19 Pandemic: An Explanation Based on Affective Polarization and Information Source</span>
+            <span class="venue"><i>Taiwan Democracy Quarterly</i>, 17(3), 1&ndash;49<span class="tag">in Mandarin</span></span>
+          </span>
+          <span class="l-zh">
+            <span class="authors">黃芳誼、<b>林竣達</b>（2020）</span>
+            <span class="title">美國民眾對新冠病毒的防疫偏好與行為──情感極化與資訊來源的解釋</span>
+            <span class="venue">《臺灣民主季刊》，17(3)，1&ndash;49</span>
+          </span>
+        </li>
+        <li>
+          <span class="authors">Jong-sung You and <b>Jiun-Da Lin</b> (2020)</span>
+          <span class="title">Liberal Taiwan versus Illiberal South Korea: The Divergent Paths of Election Campaign Regulation</span>
+          <span class="venue"><i>Journal of East Asian Studies</i>, 20(3), 437&ndash;462</span>
+        </li>
+      </ol>
+
+      <h3><span class="l-en">Book Chapters</span><span class="l-zh">專書章節</span></h3>
+      <ol class="pubs" reversed>
+        <li>
+          <span class="authors">饒聆瑄、<b>林竣達</b>（2026）</span>
+          <span class="title">權力轉移、威脅感知與中國對台海灰帶戰略</span>
+          <span class="venue">收錄於蔡東杰、加茂具樹（主編），《習近平時期中國黨政體制發展》。台北：五南<span class="l-en"><span class="tag">in Mandarin</span></span></span>
+        </li>
+        <li>
+          <span class="authors">Fang-Yi Huang and <b>Jiun-Da Lin</b> (2026)</span>
+          <span class="title">Explaining Gender-Sensitive Measures for COVID-19: The Role of Women&rsquo;s Transnational Organizations</span>
+          <span class="venue">In K. Haba and P. S. Chauhan (eds.), <i>Global Role of Asia&ndash;Indo-Pacific in International Relations</i>. Springer</span>
+        </li>
+        <li>
+          <span class="authors"><b>林竣達</b>、黃芳誼（<span class="l-en">accepted</span><span class="l-zh">已接受</span>）</span>
+          <span class="title">國家認同與全球化態度：對台灣的個案分析</span>
+          <span class="venue">《台灣社會變遷基本調查計畫成果叢書系列四》<span class="l-en"><span class="tag">in Mandarin</span></span></span>
+        </li>
+        <li>
+          <span class="authors"><b>Jiun-Da Lin</b> (2024)</span>
+          <span class="title">Governance of Green Bonds in China</span>
+          <span class="venue">In X. Zang and X. Zhang (eds.), <i>Handbook on Climate Change and Environmental Governance in China</i>. Edward Elgar</span>
+        </li>
+        <li>
+          <span class="authors"><b>林竣達</b>（2023）</span>
+          <span class="title">從私權威觀點看自願性全球標準的發展</span>
+          <span class="venue">收錄於林義鈞（主編），《非傳統安全：治理面貌與政治體制》。高雄：巨流<span class="l-en"><span class="tag">in Mandarin</span></span></span>
+        </li>
+      </ol>
+    </section>
+
+    <section id="commentary">
+      <h2><span class="l-en">Policy Commentary</span><span class="l-zh">政策評論</span></h2>
+      <ol class="pubs" reversed>
+        <li>
+          <span class="authors">陳暄云、<b>林竣達</b>（2025）</span>
+          <span class="title">中國國家積體電路產業投資基金的發展與挑戰</span>
+          <span class="venue">《中國大陸研究教學通訊》，(155)</span>
+        </li>
+        <li>
+          <span class="authors"><b>林竣達</b>（2025）</span>
+          <span class="title">川普2.0新情勢下的中國對外發展戰略</span>
+          <span class="venue">《中共研究》，59(3)</span>
+        </li>
+        <li>
+          <span class="authors"><b>Jiun-Da Lin</b> and Kuei-Tien Chou (2025)</span>
+          <span class="title"><a href="https://taiwaninsight.org/2025/01/24/taiwans-just-transition-findings-from-the-2024-survey/">Taiwan&rsquo;s Just Transition: Findings from the 2024 Survey</a></span>
+          <span class="venue"><i>Taiwan Insight</i></span>
+        </li>
+        <li>
+          <span class="authors"><b>林竣達</b>（2024）</span>
+          <span class="title">中國大陸當前經濟發展困境的制度根源</span>
+          <span class="venue">《中共研究》，58(3)</span>
+        </li>
+        <li>
+          <span class="authors"><b>林竣達</b>（2024）</span>
+          <span class="title">中國大陸綠色產業的全球擴張與發展困境</span>
+          <span class="venue">《展望與探索》，22(8)</span>
+        </li>
+        <li>
+          <span class="authors"><b>林竣達</b>（2024）</span>
+          <span class="title">碳有價時代來臨　企業的挑戰與因應</span>
+          <span class="venue">《交流雜誌》，(194)</span>
+        </li>
+        <li>
+          <span class="authors"><b>林竣達</b>（2024）</span>
+          <span class="title">當前中共推動支持民營經濟之觀察</span>
+          <span class="venue">《交流雜誌》，(193)</span>
+        </li>
+        <li>
+          <span class="authors"><b>林竣達</b>（2023）</span>
+          <span class="title">全球氣候金融的發展現況</span>
+          <span class="venue">《國際開發援助現場季刊》，(14)，9&ndash;14</span>
+        </li>
+        <li>
+          <span class="authors"><b>林竣達</b>（2023）</span>
+          <span class="title">綠色債券：氣候危機的解方？</span>
+          <span class="venue">《鉅變新視界電子報》，(46)</span>
+        </li>
+      </ol>
+
+      <h3><span class="l-en">In the Media</span><span class="l-zh">媒體報導</span></h3>
+      <ul class="rows">
+        <li><span class="yr">&nbsp;</span><span class="what">台大風險中心調查：民眾樂觀迎向綠色職缺　政府如何不把希望變失望？<small>環境資訊中心</small></span></li>
+        <li><span class="yr">&nbsp;</span><span class="what">台大淨零民調：九成民眾有感氣候變遷　八成願多付電費<small>環境資訊中心</small></span></li>
+      </ul>
+    </section>
+
+    <section id="teaching">
+      <h2><span class="l-en">Teaching</span><span class="l-zh">教學</span></h2>
+      <h3><span class="l-en">National Taiwan University</span><span class="l-zh">國立臺灣大學</span></h3>
+      <ul class="rows">
+        <li><span class="yr">2022–2025</span><span class="what"><span class="l-en">Seminar on China and Global Climate Governance</span><span class="l-zh">中國與全球氣候治理專題</span></span></li>
+        <li><span class="yr">2022–2025</span><span class="what"><span class="l-en">Globalization and Transnational Governance</span><span class="l-zh">全球化與跨國治理</span></span></li>
+        <li><span class="yr">2022–2024</span><span class="what"><span class="l-en">Seminar on China&ndash;US Relations and Global Governance</span><span class="l-zh">中美關係與全球治理專題</span></span></li>
+        <li><span class="yr">2022–2024</span><span class="what"><span class="l-en">Sustainable Finance and ESG</span><span class="l-zh">永續金融與 ESG</span></span></li>
+        <li><span class="yr">2023–2025</span><span class="what"><span class="l-en">Seminar on Research Methods in Social Sciences</span><span class="l-zh">社會科學研究方法專題</span></span></li>
+        <li><span class="yr">2024</span><span class="what"><span class="l-en">Seminar on Environmental Governance</span><span class="l-zh">環境治理專題</span></span></li>
+        <li><span class="yr">2022</span><span class="what"><span class="l-en">Seminar on Chinese State Capitalism</span><span class="l-zh">中國國家資本主義專題</span></span></li>
+      </ul>
+      <h3><span class="l-en">University of Maryland, College Park</span><span class="l-zh">美國馬里蘭大學</span></h3>
+      <ul class="rows">
+        <li><span class="yr">2019</span><span class="what"><span class="l-en">International Political Relations <small>Instructor</small></span><span class="l-zh">國際政治關係<small>授課教師</small></span></span></li>
+        <li><span class="yr">2016–2019</span><span class="what">
+          <span class="l-en">Teaching assistant<small>Politics and the Developing World &middot; Introduction to Environmental Politics &middot; International Negotiations &middot; Appetite for Change: Politics and the Globalization of Food</small></span>
+          <span class="l-zh">教學助理<small>Politics and the Developing World &middot; Introduction to Environmental Politics &middot; International Negotiations &middot; Appetite for Change: Politics and the Globalization of Food</small></span>
+        </span></li>
+      </ul>
+    </section>
+
+    <section id="advising">
+      <h2><span class="l-en">Advising</span><span class="l-zh">學生指導</span></h2>
+
+      <h3><span class="l-en">Thesis &amp; Dissertation Advising</span><span class="l-zh">論文指導</span></h3>
+      <p>
+        <span class="l-en">
+          I welcome inquiries from students whose projects have a strong substantive fit
+          with my research areas. Prospective advisees should have taken one of my
+          courses that requires a final essay or research paper and earned a grade of A
+          or higher. If you would like to work with me, please email me a concise
+          description of your proposed research topic and an explanation of why I would
+          be an appropriate advisor. I may have to decline requests when I am already
+          advising too many students.
+        </span>
+        <span class="l-zh">
+          歡迎研究主題與我的研究領域高度契合的同學來信洽詢論文指導。欲申請指導的同學，應修習過我開設、以期末論文或研究報告為要求的課程，且成績達
+          A 以上。有意申請者，請以電子郵件簡述你的研究主題構想，並說明為何適合由我擔任指導教授。若指導學生人數已滿，我可能需要婉拒。
+        </span>
+      </p>
+
+      <h3><span class="l-en">Letters of Recommendation</span><span class="l-zh">推薦信</span></h3>
+      <p>
+        <span class="l-en">
+          To request a letter, you should have completed one of my courses with a final
+          essay or research paper and earned an A or higher, contacted me at least one
+          month before the deadline, attended my office hours at least once, and waived
+          your right to read the letter. Along with your request, please send the final
+          paper from the course, a current resume or CV, an unofficial transcript, and a
+          draft of your application essay or personal statement. Reminder emails a few
+          days before the deadline are welcome.
+        </span>
+        <span class="l-zh">
+          申請推薦信者，應修習過我以期末論文或研究報告為要求的課程且成績達 A
+          以上、於截止日至少一個月前提出、曾參加過至少一次 office
+          hours，並放棄閱讀推薦信的權利。來信時請一併提供：該課程的期末報告、最新履歷或
+          CV、非正式成績單，以及申請文件或自傳的草稿。截止日前幾天歡迎來信提醒。
+        </span>
+      </p>
+    </section>
+
+    <section id="talks">
+      <h2><span class="l-en">Talks</span><span class="l-zh">學術報告</span></h2>
+
+      <h3><span class="l-en">Invited Talks</span><span class="l-zh">邀請演講</span></h3>
+      <ul class="rows">
+        <li><span class="yr">2024</span><span class="what"><span class="l-en">National Chengchi University &middot; Chung-Hua Institution for Economic Research</span><span class="l-zh">國立政治大學 &middot; 中華經濟研究院</span></span></li>
+        <li><span class="yr">2023</span><span class="what"><span class="l-en">Indiana University Bloomington &middot; Yonsei University &middot; Kyoto University</span><span class="l-zh">美國印第安納大學 &middot; 韓國延世大學 &middot; 日本京都大學</span></span></li>
+        <li><span class="yr">2022</span><span class="what"><span class="l-en">National Chengchi University &middot; National Cheng Kung University &middot; National Tsing Hua University &middot; Soochow University</span><span class="l-zh">國立政治大學 &middot; 國立成功大學 &middot; 國立清華大學 &middot; 東吳大學</span></span></li>
+      </ul>
+
+      <h3><span class="l-en">Conferences &amp; Workshops</span><span class="l-zh">研討會與工作坊</span></h3>
+      <ul class="rows">
+        <li><span class="yr">2023–2024</span><span class="what"><span class="l-en">American Political Science Association, Annual Meeting</span><span class="l-zh">美國政治學會年會（APSA）</span></span></li>
+        <li><span class="yr">2024</span><span class="what"><span class="l-en">SMU&ndash;Leiden Workshop on Green Regionalism &middot; NTU&ndash;KU&ndash;UHH Trilateral Symposium</span><span class="l-zh">SMU&ndash;Leiden 綠色區域主義工作坊 &middot; 臺大&ndash;京都大學&ndash;漢堡大學三邊研討會</span></span></li>
+        <li><span class="yr">2023</span><span class="what"><span class="l-en">International Studies Association, Asia-Pacific Region Conference</span><span class="l-zh">國際研究學會亞太區域會議（ISA Asia-Pacific）</span></span></li>
+        <li><span class="yr">2015, 2023</span><span class="what"><span class="l-en">Midwest Political Science Association, Annual Meeting</span><span class="l-zh">美國中西部政治學會年會（MPSA）</span></span></li>
+      </ul>
+    </section>
+
+    <section id="grants">
+      <h2><span class="l-en">Grants &amp; Awards</span><span class="l-zh">獎助與榮譽</span></h2>
+      <ul class="rows">
+        <li><span class="yr">2023</span><span class="what"><span class="l-en">Travel Grant, American Political Science Association</span><span class="l-zh">美國政治學會旅行補助</span></span></li>
+        <li><span class="yr">2023</span><span class="what"><span class="l-en">Teaching Practice Incubation Grant, National Taiwan University</span><span class="l-zh">臺灣大學教學實踐研究孵育計畫</span></span></li>
+        <li><span class="yr">2022</span><span class="what"><span class="l-en">Climate Change Teaching Grant, Ministry of Education</span><span class="l-zh">教育部氣候變遷教學計畫</span></span></li>
+        <li><span class="yr">2020–2021</span><span class="what"><span class="l-en">Dissertation Fellowship for ROC Students Abroad, Chiang Ching-kuo Foundation</span><span class="l-zh">蔣經國國際學術交流基金會博士論文獎學金</span></span></li>
+        <li><span class="yr">2019</span><span class="what"><span class="l-en">OYCF&ndash;Chow Fellowship for Field Research in China</span><span class="l-zh">OYCF&ndash;Chow 中國田野研究獎助</span></span></li>
+        <li><span class="yr">2014–2016</span><span class="what"><span class="l-en">Taiwanese Government Scholarship for Overseas Studies</span><span class="l-zh">教育部公費留學獎學金</span></span></li>
+        <li><span class="yr">2013–2014</span><span class="what"><span class="l-en">Fulbright Graduate Study Grant</span><span class="l-zh">傅爾布萊特（Fulbright）留學獎助</span></span></li>
+        <li><span class="yr">2010</span><span class="what"><span class="l-en">Lei Chen Public Trust Fellowship &middot; Tsunah Foundation Fellowship</span><span class="l-zh">雷震公益信託獎學金 &middot; Tsunah Foundation Fellowship</span></span></li>
+        <li><span class="yr">2009–2010</span><span class="what"><span class="l-en">Fellowship, Research Center for Digital Humanities, NTU</span><span class="l-zh">臺大數位人文研究中心獎助</span></span></li>
+      </ul>
+    </section>
+
+    <section id="service">
+      <h2><span class="l-en">Service</span><span class="l-zh">學術服務</span></h2>
+      <ul class="rows">
+        <li><span class="yr">2023–2025</span><span class="what"><span class="l-en">Director, Taiwan Development Studies Association</span><span class="l-zh">台灣發展研究學會理事</span></span></li>
+        <li><span class="yr">&nbsp;</span><span class="what">
+          <span class="l-en">Journal Reviewer<small>Journal of Politics &middot; Journal of Contemporary China &middot; Asia Europe Journal &middot; Journal of Environmental Planning and Management &middot; Asia Pacific Journal of Social Work and Development &middot; Taiwanese Political Science Review &middot; Issues &amp; Studies &middot; Chinese Political Science Review &middot; Wenti Yu Yanjiu &middot; Tamkang Journal of International Affairs</small></span>
+          <span class="l-zh">期刊審查人<small>Journal of Politics &middot; Journal of Contemporary China &middot; Asia Europe Journal &middot; Journal of Environmental Planning and Management &middot; Asia Pacific Journal of Social Work and Development &middot; 臺灣政治學刊 &middot; Issues &amp; Studies &middot; Chinese Political Science Review &middot; 問題與研究 &middot; 淡江國際事務學報</small></span>
+        </span></li>
+        <li><span class="yr">&nbsp;</span><span class="what">
+          <span class="l-en">Discussant / Panel Organizer<small>ISESEA-10 &middot; World Congress of Taiwan Studies &middot; Taiwanese Political Science Association &middot; Chinese Association of Political Science &middot; Taiwan Development Studies Association</small></span>
+          <span class="l-zh">論文評論人／場次籌組<small>ISESEA-10 &middot; 世界台灣研究大會 &middot; 台灣政治學會年會 &middot; 中國政治學會年會 &middot; 台灣發展研究學會年會</small></span>
+        </span></li>
+        <li><span class="yr">2023–</span><span class="what">
+          <span class="l-en">University Service<small>NTU Admissions Committee (2023) &middot; College of Social Sciences Curriculum Committee (2023&ndash;)</small></span>
+          <span class="l-zh">校內服務<small>臺大招生委員會（2023）&middot; 社會科學院課程委員會（2023&ndash;）</small></span>
+        </span></li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2><span class="l-en">Contact</span><span class="l-zh">聯絡方式</span></h2>
+      <address>
+        <span class="l-en">
+          Graduate Institute of National Development<br>
+          National Taiwan University<br>
+          No. 1, Sec. 4, Roosevelt Road, Taipei 10617, Taiwan<br>
+          <span class="zh">10617 臺北市大安區羅斯福路四段一號　國家發展研究所</span><br><br>
+        </span>
+        <span class="l-zh">
+          10617 臺北市大安區羅斯福路四段一號<br>
+          國立臺灣大學 國家發展研究所<br><br>
+        </span>
+        <a href="mailto:jdlin0510@ntu.edu.tw">jdlin0510@ntu.edu.tw</a><br>
+        +886-2-3366-3345
+      </address>
+      <footer>&copy; 2026 Jiun-Da Lin 林竣達</footer>
+    </section>
+
+  </main>
+</div>
+
+<script>
+(function(){
+  var btn=document.getElementById('langBtn');
+  btn.addEventListener('click',function(){
+    var zh=document.documentElement.getAttribute('data-lang')==='zh';
+    if(zh){
+      document.documentElement.removeAttribute('data-lang');
+      document.documentElement.lang='en';
+    }else{
+      document.documentElement.setAttribute('data-lang','zh');
+      document.documentElement.lang='zh-Hant';
+    }
+    try{localStorage.setItem('lang',zh?'en':'zh')}catch(e){}
+  });
+})();
+</script>
+</body>
+</html>
