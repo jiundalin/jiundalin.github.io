@@ -7,45 +7,9 @@
 <title>Jiun-Da Lin 林竣達 — National Taiwan University</title>
 <script>try{var l=localStorage.getItem('lang');if(l==='zh'||l==='ja'){document.documentElement.setAttribute('data-lang',l);document.documentElement.lang=(l==='zh'?'zh-Hant':'ja')}}catch(e){}</script>
 <style>
+/* single light theme by design — the site stays white in dark mode too */
 :root{
-  --paper:#f6f8f4;
-  --paper-raise:#eef2ea;
-  --ink:#2e352c;
-  --muted:#6d766a;
-  --faint:#96a091;
-  --hairline:#e2e8de;
-  --accent:#6a8a6d;
-  --accent-soft:#e9f0e7;
-  --seal:#a98467;
-  --seal-ink:#fbf7f2;
-}
-@media (prefers-color-scheme: dark){
-  :root{
-    --paper:#171a16;
-    --paper-raise:#1e231d;
-    --ink:#e6eae3;
-    --muted:#a5aea0;
-    --faint:#7b8575;
-    --hairline:#2b322a;
-    --accent:#9dbb9e;
-    --accent-soft:#232d22;
-    --seal:#b09070;
-    --seal-ink:#f6efe6;
-  }
-}
-:root[data-theme="dark"]{
-  --paper:#171a16;
-  --paper-raise:#1e231d;
-  --ink:#e6eae3;
-  --muted:#a5aea0;
-  --faint:#7b8575;
-  --hairline:#2b322a;
-  --accent:#9dbb9e;
-  --accent-soft:#232d22;
-  --seal:#b09070;
-  --seal-ink:#f6efe6;
-}
-:root[data-theme="light"]{
+  color-scheme: light;
   --paper:#f6f8f4;
   --paper-raise:#eef2ea;
   --ink:#2e352c;
