@@ -21,16 +21,16 @@
 }
 @media (prefers-color-scheme: dark){
   :root{
-    --paper:#181b1f;
-    --paper-raise:#1f2328;
-    --ink:#e5e8eb;
-    --muted:#a2abb4;
-    --faint:#7b848d;
-    --hairline:#2b3138;
-    --accent:#93b3d7;
-    --accent-soft:#232c36;
-    --seal:#ad7268;
-    --seal-ink:#f8f1ec;
+    --paper:#171a16;
+    --paper-raise:#1e231d;
+    --ink:#e6eae3;
+    --muted:#a5aea0;
+    --faint:#7b8575;
+    --hairline:#2b322a;
+    --accent:#9dbb9e;
+    --accent-soft:#232d22;
+    --seal:#b09070;
+    --seal-ink:#f6efe6;
   }
 }
 :root[data-theme="dark"]{
@@ -96,21 +96,23 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
 main{padding:56px 56px 80px 64px;max-width:860px}
 
 /* ---- rail ---- */
-.id-row{display:flex;align-items:flex-start;gap:14px;margin-bottom:20px}
+.photo-wrap{position:relative;width:100%;max-width:204px;margin-bottom:22px}
 .portrait{
-  width:104px;height:104px;border-radius:12px;object-fit:cover;
+  display:block;width:100%;aspect-ratio:1;border-radius:14px;object-fit:cover;
   border:1px solid var(--hairline);
 }
 .seal{
-  width:38px;height:38px;border-radius:8px;
+  position:absolute;right:-10px;bottom:-10px;
+  width:44px;height:44px;border-radius:10px;
   background:var(--seal);color:var(--seal-ink);
   display:grid;place-items:center;
-  font-size:14.5px;line-height:1.1;letter-spacing:1px;
+  font-size:16px;line-height:1.1;letter-spacing:1px;
   font-family:"Songti TC","Noto Serif TC",serif;
   writing-mode:vertical-rl;
   user-select:none;
+  box-shadow:0 1px 4px rgba(0,0,0,.12);
 }
-.lang-sw{margin-left:auto;display:flex;gap:4px}
+.lang-sw{display:flex;gap:4px;justify-content:flex-end;margin-bottom:18px}
 .lang-sw button{
   padding:4px 9px;border:1px solid var(--hairline);border-radius:99px;
   background:none;color:var(--muted);cursor:pointer;
@@ -238,14 +240,14 @@ footer{margin-top:40px;font-size:13px;color:var(--faint)}
 <div class="frame">
 
   <aside class="rail">
-    <div class="id-row">
+    <div class="lang-sw" role="group" aria-label="Language">
+      <button type="button" data-l="en">EN</button>
+      <button type="button" data-l="zh">中文</button>
+      <button type="button" data-l="ja">日本語</button>
+    </div>
+    <div class="photo-wrap">
       <img class="portrait" src="img/portrait.jpg" alt="Portrait of Jiun-Da Lin">
       <div class="seal" aria-hidden="true">竣達</div>
-      <div class="lang-sw" role="group" aria-label="Language">
-        <button type="button" data-l="en">EN</button>
-        <button type="button" data-l="zh">中文</button>
-        <button type="button" data-l="ja">日本語</button>
-      </div>
     </div>
     <h1>
       <span class="zh-name">林竣達</span>
@@ -274,9 +276,6 @@ footer{margin-top:40px;font-size:13px;color:var(--faint)}
       <a href="#commentary"><span class="l-en">Commentary</span><span class="l-zh">政策評論</span><span class="l-ja">政策コラム</span></a>
       <a href="#teaching"><span class="l-en">Teaching</span><span class="l-zh">教學</span><span class="l-ja">担当科目</span></a>
       <a href="#advising"><span class="l-en">Advising</span><span class="l-zh">學生指導</span><span class="l-ja">学生指導</span></a>
-      <a href="#talks"><span class="l-en">Talks</span><span class="l-zh">學術報告</span><span class="l-ja">講演・報告</span></a>
-      <a href="#grants"><span class="l-en">Awards</span><span class="l-zh">獎助榮譽</span><span class="l-ja">受賞・助成</span></a>
-      <a href="#service"><span class="l-en">Service</span><span class="l-zh">學術服務</span><span class="l-ja">学術活動</span></a>
       <a href="#contact"><span class="l-en">Contact</span><span class="l-zh">聯絡方式</span><span class="l-ja">連絡先</span></a>
     </nav>
 
@@ -640,61 +639,8 @@ footer{margin-top:40px;font-size:13px;color:var(--faint)}
       </p>
     </section>
 
-    <section id="talks">
-      <h2><span class="l-en">Talks</span><span class="l-zh">學術報告</span><span class="l-ja">講演・報告</span></h2>
 
-      <h3><span class="l-en">Invited Talks</span><span class="l-zh">邀請演講</span><span class="l-ja">招待講演</span></h3>
-      <ul class="rows">
-        <li><span class="yr">2024</span><span class="what"><span class="l-en">National Chengchi University &middot; Chung-Hua Institution for Economic Research</span><span class="l-zh">國立政治大學 &middot; 中華經濟研究院</span><span class="l-ja">国立政治大学 &middot; 中華経済研究院</span></span></li>
-        <li><span class="yr">2023</span><span class="what"><span class="l-en">Indiana University Bloomington &middot; Yonsei University &middot; Kyoto University</span><span class="l-zh">美國印第安納大學 &middot; 韓國延世大學 &middot; 日本京都大學</span><span class="l-ja">インディアナ大学ブルーミントン校 &middot; 延世大学 &middot; 京都大学</span></span></li>
-        <li><span class="yr">2022</span><span class="what"><span class="l-en">National Chengchi University &middot; National Cheng Kung University &middot; National Tsing Hua University &middot; Soochow University</span><span class="l-zh">國立政治大學 &middot; 國立成功大學 &middot; 國立清華大學 &middot; 東吳大學</span><span class="l-ja">国立政治大学 &middot; 国立成功大学 &middot; 国立清華大学 &middot; 東呉大学</span></span></li>
-      </ul>
 
-      <h3><span class="l-en">Conferences &amp; Workshops</span><span class="l-zh">研討會與工作坊</span><span class="l-ja">学会・ワークショップ</span></h3>
-      <ul class="rows">
-        <li><span class="yr">2023–2024</span><span class="what"><span class="l-en">American Political Science Association, Annual Meeting</span><span class="l-zh">美國政治學會年會（APSA）</span><span class="l-ja">アメリカ政治学会年次大会（APSA）</span></span></li>
-        <li><span class="yr">2024</span><span class="what"><span class="l-en">SMU&ndash;Leiden Workshop on Green Regionalism &middot; NTU&ndash;KU&ndash;UHH Trilateral Symposium</span><span class="l-zh">SMU&ndash;Leiden 綠色區域主義工作坊 &middot; 臺大&ndash;京都大學&ndash;漢堡大學三邊研討會</span><span class="l-ja">SMU&ndash;ライデン大学グリーン・リージョナリズム・ワークショップ &middot; 台湾大学&ndash;京都大学&ndash;ハンブルク大学 三大学シンポジウム</span></span></li>
-        <li><span class="yr">2023</span><span class="what"><span class="l-en">International Studies Association, Asia-Pacific Region Conference</span><span class="l-zh">國際研究學會亞太區域會議（ISA Asia-Pacific）</span><span class="l-ja">国際関係学会アジア太平洋会議（ISA Asia-Pacific）</span></span></li>
-        <li><span class="yr">2015, 2023</span><span class="what"><span class="l-en">Midwest Political Science Association, Annual Meeting</span><span class="l-zh">美國中西部政治學會年會（MPSA）</span><span class="l-ja">中西部政治学会年次大会（MPSA）</span></span></li>
-      </ul>
-    </section>
-
-    <section id="grants">
-      <h2><span class="l-en">Grants &amp; Awards</span><span class="l-zh">獎助與榮譽</span><span class="l-ja">受賞・助成</span></h2>
-      <ul class="rows">
-        <li><span class="yr">2023</span><span class="what"><span class="l-en">Travel Grant, American Political Science Association</span><span class="l-zh">美國政治學會旅行補助</span><span class="l-ja">アメリカ政治学会 渡航助成</span></span></li>
-        <li><span class="yr">2023</span><span class="what"><span class="l-en">Teaching Practice Incubation Grant, National Taiwan University</span><span class="l-zh">臺灣大學教學實踐研究孵育計畫</span><span class="l-ja">台湾大学 教育実践インキュベーション助成</span></span></li>
-        <li><span class="yr">2022</span><span class="what"><span class="l-en">Climate Change Teaching Grant, Ministry of Education</span><span class="l-zh">教育部氣候變遷教學計畫</span><span class="l-ja">教育部 気候変動教育助成</span></span></li>
-        <li><span class="yr">2020–2021</span><span class="what"><span class="l-en">Dissertation Fellowship for ROC Students Abroad, Chiang Ching-kuo Foundation</span><span class="l-zh">蔣經國國際學術交流基金會博士論文獎學金</span><span class="l-ja">蔣経国国際学術交流基金会 博士論文フェローシップ</span></span></li>
-        <li><span class="yr">2019</span><span class="what"><span class="l-en">OYCF&ndash;Chow Fellowship for Field Research in China</span><span class="l-zh">OYCF&ndash;Chow 中國田野研究獎助</span><span class="l-ja">OYCF&ndash;Chow 中国フィールド調査フェローシップ</span></span></li>
-        <li><span class="yr">2014–2016</span><span class="what"><span class="l-en">Taiwanese Government Scholarship for Overseas Studies</span><span class="l-zh">教育部公費留學獎學金</span><span class="l-ja">台湾教育部 国費留学奨学金</span></span></li>
-        <li><span class="yr">2013–2014</span><span class="what"><span class="l-en">Fulbright Graduate Study Grant</span><span class="l-zh">傅爾布萊特（Fulbright）留學獎助</span><span class="l-ja">フルブライト大学院留学助成</span></span></li>
-        <li><span class="yr">2010</span><span class="what"><span class="l-en">Lei Chen Public Trust Fellowship &middot; Tsunah Foundation Fellowship</span><span class="l-zh">雷震公益信託獎學金 &middot; Tsunah Foundation Fellowship</span><span class="l-ja">雷震公益信託奨学金 &middot; Tsunah Foundation Fellowship</span></span></li>
-        <li><span class="yr">2009–2010</span><span class="what"><span class="l-en">Fellowship, Research Center for Digital Humanities, NTU</span><span class="l-zh">臺大數位人文研究中心獎助</span><span class="l-ja">台湾大学デジタル人文研究センター フェローシップ</span></span></li>
-      </ul>
-    </section>
-
-    <section id="service">
-      <h2><span class="l-en">Service</span><span class="l-zh">學術服務</span><span class="l-ja">学術活動</span></h2>
-      <ul class="rows">
-        <li><span class="yr">2023–2025</span><span class="what"><span class="l-en">Director, Taiwan Development Studies Association</span><span class="l-zh">台灣發展研究學會理事</span><span class="l-ja">台湾発展研究学会 理事</span></span></li>
-        <li><span class="yr">&nbsp;</span><span class="what">
-          <span class="l-en">Journal Reviewer<small>Journal of Politics &middot; Journal of Contemporary China &middot; Asia Europe Journal &middot; Journal of Environmental Planning and Management &middot; Asia Pacific Journal of Social Work and Development &middot; Taiwanese Political Science Review &middot; Issues &amp; Studies &middot; Chinese Political Science Review &middot; Wenti Yu Yanjiu &middot; Tamkang Journal of International Affairs</small></span>
-          <span class="l-zh">期刊審查人<small>Journal of Politics &middot; Journal of Contemporary China &middot; Asia Europe Journal &middot; Journal of Environmental Planning and Management &middot; Asia Pacific Journal of Social Work and Development &middot; 臺灣政治學刊 &middot; Issues &amp; Studies &middot; Chinese Political Science Review &middot; 問題與研究 &middot; 淡江國際事務學報</small></span>
-          <span class="l-ja">学術誌査読<small>Journal of Politics &middot; Journal of Contemporary China &middot; Asia Europe Journal &middot; Journal of Environmental Planning and Management &middot; Asia Pacific Journal of Social Work and Development &middot; 台湾政治学刊 &middot; Issues &amp; Studies &middot; Chinese Political Science Review &middot; 問題与研究 &middot; 淡江国際事務学報</small></span>
-        </span></li>
-        <li><span class="yr">&nbsp;</span><span class="what">
-          <span class="l-en">Discussant / Panel Organizer<small>ISESEA-10 &middot; World Congress of Taiwan Studies &middot; Taiwanese Political Science Association &middot; Chinese Association of Political Science &middot; Taiwan Development Studies Association</small></span>
-          <span class="l-zh">論文評論人／場次籌組<small>ISESEA-10 &middot; 世界台灣研究大會 &middot; 台灣政治學會年會 &middot; 中國政治學會年會 &middot; 台灣發展研究學會年會</small></span>
-          <span class="l-ja">討論者／パネル企画<small>ISESEA-10 &middot; 世界台湾研究大会 &middot; 台湾政治学会 &middot; 中国政治学会 &middot; 台湾発展研究学会</small></span>
-        </span></li>
-        <li><span class="yr">2023–</span><span class="what">
-          <span class="l-en">University Service<small>NTU Admissions Committee (2023) &middot; College of Social Sciences Curriculum Committee (2023&ndash;)</small></span>
-          <span class="l-zh">校內服務<small>臺大招生委員會（2023）&middot; 社會科學院課程委員會（2023&ndash;）</small></span>
-          <span class="l-ja">学内委員<small>台湾大学入試委員会（2023）&middot; 社会科学院カリキュラム委員会（2023&ndash;）</small></span>
-        </span></li>
-      </ul>
-    </section>
 
     <section id="contact">
       <h2><span class="l-en">Contact</span><span class="l-zh">聯絡方式</span><span class="l-ja">連絡先</span></h2>
