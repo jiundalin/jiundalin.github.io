@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Jiun-Da Lin (林竣達) — Assistant Professor, Graduate Institute of National Development, National Taiwan University. Research on sustainable finance, climate governance, Chinese politics, and global governance.">
 <title>Jiun-Da Lin 林竣達 — National Taiwan University</title>
-<script>try{var l=localStorage.getItem('lang');if(l==='zh'||l==='ja'){document.documentElement.setAttribute('data-lang',l);document.documentElement.lang=(l==='zh'?'zh-Hant':'ja')}}catch(e){}</script>
+<script>try{var l=localStorage.getItem('lang');if(l==='zh'||l==='ja'||l==='ko'){document.documentElement.setAttribute('data-lang',l);document.documentElement.lang=(l==='zh'?'zh-Hant':l)}}catch(e){}</script>
 <style>
 /* single light theme by design — the site stays white in dark mode too */
 :root{
@@ -28,9 +28,10 @@ html{scroll-behavior:smooth;scroll-padding-top:84px}
   *{transition:none !important;animation:none !important}
 }
 /* language switching */
-html[data-lang="zh"] :is(.l-en,.l-ja):not(.l-zh){display:none !important}
-html[data-lang="ja"] :is(.l-en,.l-zh):not(.l-ja){display:none !important}
-html:not([data-lang="zh"]):not([data-lang="ja"]) :is(.l-zh,.l-ja):not(.l-en){display:none !important}
+html[data-lang="zh"] :is(.l-en,.l-ja,.l-ko):not(.l-zh){display:none !important}
+html[data-lang="ja"] :is(.l-en,.l-zh,.l-ko):not(.l-ja){display:none !important}
+html[data-lang="ko"] :is(.l-en,.l-zh,.l-ja):not(.l-ko){display:none !important}
+html:not([data-lang="zh"]):not([data-lang="ja"]):not([data-lang="ko"]) :is(.l-zh,.l-ja,.l-ko):not(.l-en){display:none !important}
 body{
   background:var(--paper);
   color:var(--ink);
@@ -41,9 +42,10 @@ body{
 }
 html[data-lang="zh"] body{line-height:1.85}
 html[data-lang="ja"] body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic","Segoe UI",sans-serif;line-height:1.85}
+html[data-lang="ko"] body{font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic","Segoe UI",sans-serif;line-height:1.85}
 /* serif display voice: name, lede, publication titles */
 .brand,.hero h1,.lede,.pubs .title{
-  font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Songti TC","Hiragino Mincho ProN","Noto Serif TC",serif;
+  font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Songti TC","Hiragino Mincho ProN","Noto Serif TC","AppleMyungjo",Batang,serif;
 }
 a{color:var(--accent);text-decoration:none}
 a:hover{text-decoration:underline;text-underline-offset:3px}
@@ -82,9 +84,10 @@ nav a:hover{color:var(--accent);text-decoration:none}
   transition:color .15s ease,border-color .15s ease;
 }
 .lang-sw button:hover{color:var(--accent);border-color:var(--accent)}
-html:not([data-lang="zh"]):not([data-lang="ja"]) .lang-sw [data-l="en"],
+html:not([data-lang="zh"]):not([data-lang="ja"]):not([data-lang="ko"]) .lang-sw [data-l="en"],
 html[data-lang="zh"] .lang-sw [data-l="zh"],
-html[data-lang="ja"] .lang-sw [data-l="ja"]{
+html[data-lang="ja"] .lang-sw [data-l="ja"],
+html[data-lang="ko"] .lang-sw [data-l="ko"]{
   color:var(--accent);border-color:var(--accent);font-weight:600;
 }
 main{max-width:880px;margin:0 auto;padding:46px 32px 80px}
@@ -210,18 +213,19 @@ footer{margin-top:40px;font-size:13px;color:var(--faint)}
   <div class="topbar-inner">
     <a class="brand" href="#about"><span class="zh-name">林竣達</span>Jiun-Da Lin</a>
     <nav aria-label="Sections">
-      <a href="#about"><span class="l-en">About</span><span class="l-zh">關於</span><span class="l-ja">プロフィール</span></a>
-      <a href="#research"><span class="l-en">Research</span><span class="l-zh">研究</span><span class="l-ja">研究</span></a>
-      <a href="#publications"><span class="l-en">Publications</span><span class="l-zh">著作</span><span class="l-ja">業績</span></a>
-      <a href="#commentary"><span class="l-en">Commentary</span><span class="l-zh">政策評論</span><span class="l-ja">政策コラム</span></a>
-      <a href="#teaching"><span class="l-en">Teaching</span><span class="l-zh">教學</span><span class="l-ja">担当科目</span></a>
-      <a href="#advising"><span class="l-en">Advising</span><span class="l-zh">學生指導</span><span class="l-ja">学生指導</span></a>
-      <a href="#contact"><span class="l-en">Contact</span><span class="l-zh">聯絡方式</span><span class="l-ja">連絡先</span></a>
+      <a href="#about"><span class="l-en">About</span><span class="l-zh">關於</span><span class="l-ja">プロフィール</span><span class="l-ko">소개</span></a>
+      <a href="#research"><span class="l-en">Research</span><span class="l-zh">研究</span><span class="l-ja">研究</span><span class="l-ko">연구</span></a>
+      <a href="#publications"><span class="l-en">Publications</span><span class="l-zh">著作</span><span class="l-ja">業績</span><span class="l-ko">연구업적</span></a>
+      <a href="#commentary"><span class="l-en">Commentary</span><span class="l-zh">政策評論</span><span class="l-ja">政策コラム</span><span class="l-ko">정책평론</span></a>
+      <a href="#teaching"><span class="l-en">Teaching</span><span class="l-zh">教學</span><span class="l-ja">担当科目</span><span class="l-ko">강의</span></a>
+      <a href="#advising"><span class="l-en">Advising</span><span class="l-zh">學生指導</span><span class="l-ja">学生指導</span><span class="l-ko">학생지도</span></a>
+      <a href="#contact"><span class="l-en">Contact</span><span class="l-zh">聯絡方式</span><span class="l-ja">連絡先</span><span class="l-ko">연락처</span></a>
     </nav>
     <div class="lang-sw" role="group" aria-label="Language">
       <button type="button" data-l="en">EN</button>
       <button type="button" data-l="zh">中文</button>
       <button type="button" data-l="ja">日本語</button>
+      <button type="button" data-l="ko">한국어</button>
     </div>
   </div>
 </header>
@@ -248,6 +252,10 @@ footer{margin-top:40px;font-size:13px;color:var(--faint)}
           助理教授（Assistant Professor）<br>
           <em>国立台湾大学 国家発展研究所</em>
         </span>
+        <span class="l-ko">
+          조교수（Assistant Professor）<br>
+          <em>국립타이완대학 국가발전연구소</em>
+        </span>
       </p>
       <div class="hero-links">
         <div class="socials">
@@ -262,7 +270,7 @@ footer{margin-top:40px;font-size:13px;color:var(--faint)}
         </a>
         </div>
         <a href="mailto:jdlin0510@ntu.edu.tw">jdlin0510@ntu.edu.tw</a>
-        <a class="cv-btn" href="cv/CV_JiunDaLin.pdf" download><span class="l-en">Download CV</span><span class="l-zh">下載 CV</span><span class="l-ja">CV ダウンロード</span></a>
+        <a class="cv-btn" href="cv/CV_JiunDaLin.pdf" download><span class="l-en">Download CV</span><span class="l-zh">下載 CV</span><span class="l-ja">CV ダウンロード</span><span class="l-ko">CV 다운로드</span></a>
       </div>
     </div>
   </div>
@@ -279,6 +287,9 @@ footer{margin-top:40px;font-size:13px;color:var(--faint)}
         </span>
         <span class="l-ja">
           私は政治学者として、国家・市場・トランスナショナルなアクターが気候移行をいかに統治するかを研究しています。特に<a href="#research">サステナブルファイナンス</a>、中国政治、東アジアに注目しています。
+        </span>
+        <span class="l-ko">
+          저는 국가·시장·초국적 행위자가 기후 전환을 어떻게 거버넌스하는지를 연구하는 정치학자입니다. 특히 <a href="#research">지속가능금융</a>, 중국 정치, 동아시아에 주목하고 있습니다.
         </span>
       </p>
       <p style="margin-top:20px">
@@ -301,35 +312,43 @@ footer{margin-top:40px;font-size:13px;color:var(--faint)}
           林竣達（リン・ジュンダー）は、国立台湾大学国家発展研究所の助理教授であり、台湾大学リスク社会・政策研究センターおよび台湾社会レジリエンス研究センターの研究員を兼任しています。メリーランド大学カレッジパーク校で政治学博士号（比較政治・国際関係）を取得。研究成果は
           <i>Global Environmental Politics</i>、<i>Journal of Cleaner Production</i>、<i>The Pacific Review</i>、<i>Journal of East Asian Studies</i>、<i>Climate Policy</i> などの学術誌に掲載されています。
         </span>
+        <span class="l-ko">
+          린쥔다(林竣達)는 국립타이완대학 국가발전연구소 조교수이며, 타이완대학 리스크사회·정책연구센터와 타이완 사회 레질리언스 연구센터의 연구원을 겸하고 있습니다. 메릴랜드대학교 칼리지파크에서 정치학 박사학위(비교정치·국제관계)를 취득했습니다. 연구 성과는
+          <i>Global Environmental Politics</i>, <i>Journal of Cleaner Production</i>, <i>The Pacific Review</i>, <i>Journal of East Asian Studies</i>, <i>Climate Policy</i> 등의 학술지에 게재되었습니다.
+        </span>
       </p>
 
-      <h3><span class="l-en">Education</span><span class="l-zh">學歷</span><span class="l-ja">学歴</span></h3>
+      <h3><span class="l-en">Education</span><span class="l-zh">學歷</span><span class="l-ja">学歴</span><span class="l-ko">학력</span></h3>
       <ul class="rows">
         <li><span class="yr">2021</span><span class="what">
           <span class="l-en">Ph.D., Political Science<small>University of Maryland, College Park</small></span>
           <span class="l-zh">政治學博士<small>美國馬里蘭大學（University of Maryland, College Park）</small></span>
           <span class="l-ja">政治学博士（Ph.D.）<small>メリーランド大学カレッジパーク校</small></span>
+          <span class="l-ko">정치학 박사(Ph.D.)<small>메릴랜드대학교 칼리지파크</small></span>
         </span></li>
         <li><span class="yr">2015</span><span class="what">
           <span class="l-en">M.P.I.A., International Economics<small>School of Global Policy and Strategy (IR/PS), UC San Diego</small></span>
           <span class="l-zh">國際事務碩士（M.P.I.A.，國際經濟）<small>加州大學聖地牙哥分校 國際關係與太平洋研究學院</small></span>
           <span class="l-ja">国際関係・太平洋研究修士（M.P.I.A.、国際経済）<small>カリフォルニア大学サンディエゴ校</small></span>
+          <span class="l-ko">국제관계·태평양연구 석사(M.P.I.A., 국제경제)<small>캘리포니아대학교 샌디에이고(UCSD)</small></span>
         </span></li>
         <li><span class="yr">2010</span><span class="what">
           <span class="l-en">M.A., Political Science<small>National Taiwan University</small></span>
           <span class="l-zh">政治學碩士<small>國立臺灣大學</small></span>
           <span class="l-ja">政治学修士<small>国立台湾大学</small></span>
+          <span class="l-ko">정치학 석사<small>국립타이완대학</small></span>
         </span></li>
         <li><span class="yr">2007</span><span class="what">
           <span class="l-en">B.A., Political Science<small>National Taiwan University</small></span>
           <span class="l-zh">政治學學士<small>國立臺灣大學</small></span>
           <span class="l-ja">政治学学士<small>国立台湾大学</small></span>
+          <span class="l-ko">정치학 학사<small>국립타이완대학</small></span>
         </span></li>
       </ul>
     </section>
 
     <section id="research">
-      <h2><span class="l-en">Research</span><span class="l-zh">研究</span><span class="l-ja">研究</span></h2>
+      <h2><span class="l-en">Research</span><span class="l-zh">研究</span><span class="l-ja">研究</span><span class="l-ko">연구</span></h2>
       <p>
         <span class="l-en">
           My current projects examine the comparative politics and global governance of
@@ -344,41 +363,47 @@ footer{margin-top:40px;font-size:13px;color:var(--faint)}
         <span class="l-ja">
           現在の研究は、サステナブルファイナンスと人工知能の比較政治およびグローバル・ガバナンスに焦点を当てています。進行中の国家科学技術委員会（NSTC）プロジェクトでは、定量・定性的手法を組み合わせ、台湾・日本・韓国・中国の比較を通じて、グローバルなサステナブルファイナンスの発展を研究しています。
         </span>
+        <span class="l-ko">
+          현재 연구는 지속가능금융과 인공지능의 비교정치 및 글로벌 거버넌스에 초점을 맞추고 있습니다. 진행 중인 국가과학기술위원회(NSTC) 프로젝트에서는 정량·정성 방법을 결합하여 타이완·일본·한국·중국의 비교를 통해 글로벌 지속가능금융의 발전을 연구하고 있습니다.
+        </span>
       </p>
       <ul class="chips" aria-label="Research interests">
-        <li><span class="l-en">Sustainable finance</span><span class="l-zh">永續金融</span><span class="l-ja">サステナブルファイナンス</span></li>
-        <li><span class="l-en">Climate policy</span><span class="l-zh">氣候政策</span><span class="l-ja">気候政策</span></li>
-        <li><span class="l-en">Global environmental politics</span><span class="l-zh">全球環境政治</span><span class="l-ja">グローバル環境政治</span></li>
-        <li><span class="l-en">Chinese politics</span><span class="l-zh">中國政治</span><span class="l-ja">中国政治</span></li>
-        <li><span class="l-en">Transnational governance</span><span class="l-zh">跨國治理</span><span class="l-ja">トランスナショナル・ガバナンス</span></li>
-        <li><span class="l-en">International political economy</span><span class="l-zh">國際政治經濟學</span><span class="l-ja">国際政治経済学</span></li>
-        <li><span class="l-en">AI governance</span><span class="l-zh">AI 治理</span><span class="l-ja">AI ガバナンス</span></li>
+        <li><span class="l-en">Sustainable finance</span><span class="l-zh">永續金融</span><span class="l-ja">サステナブルファイナンス</span><span class="l-ko">지속가능금융</span></li>
+        <li><span class="l-en">Climate policy</span><span class="l-zh">氣候政策</span><span class="l-ja">気候政策</span><span class="l-ko">기후 정책</span></li>
+        <li><span class="l-en">Global environmental politics</span><span class="l-zh">全球環境政治</span><span class="l-ja">グローバル環境政治</span><span class="l-ko">글로벌 환경정치</span></li>
+        <li><span class="l-en">Chinese politics</span><span class="l-zh">中國政治</span><span class="l-ja">中国政治</span><span class="l-ko">중국 정치</span></li>
+        <li><span class="l-en">Transnational governance</span><span class="l-zh">跨國治理</span><span class="l-ja">トランスナショナル・ガバナンス</span><span class="l-ko">초국적 거버넌스</span></li>
+        <li><span class="l-en">International political economy</span><span class="l-zh">國際政治經濟學</span><span class="l-ja">国際政治経済学</span><span class="l-ko">국제정치경제</span></li>
+        <li><span class="l-en">AI governance</span><span class="l-zh">AI 治理</span><span class="l-ja">AI ガバナンス</span><span class="l-ko">AI 거버넌스</span></li>
       </ul>
 
-      <h3><span class="l-en">Research Projects</span><span class="l-zh">研究計畫</span><span class="l-ja">研究プロジェクト</span></h3>
+      <h3><span class="l-en">Research Projects</span><span class="l-zh">研究計畫</span><span class="l-ja">研究プロジェクト</span><span class="l-ko">연구 프로젝트</span></h3>
       <ul class="rows">
         <li><span class="yr">2024–2027</span><span class="what">
           <span class="l-en">The Formation and Legitimation Process of Sustainable Finance: A Multilevel Mixed-Methods Analysis<small>Principal Investigator · NSTC 113-2628-H-002-014</small></span>
           <span class="l-zh">永續金融的形構與正當化過程：多層次混合方法的分析<small>主持人 · 國科會 113-2628-H-002-014</small></span>
           <span class="l-ja">サステナブルファイナンスの形成と正当化のプロセス：マルチレベル混合研究法による分析<small>研究代表者 · NSTC 113-2628-H-002-014</small></span>
+          <span class="l-ko">지속가능금융의 형성과 정당화 과정: 다층적 혼합방법 분석<small>연구책임자 · NSTC 113-2628-H-002-014</small></span>
         </span></li>
         <li><span class="yr">2022–2024</span><span class="what">
           <span class="l-en">Transnational Governance and State Capacity: A Comparative Study of Green Finance<small>Principal Investigator · NSTC 111-2410-H-002-273</small></span>
           <span class="l-zh">跨國治理與國家能力：綠色金融的比較研究<small>主持人 · 國科會 111-2410-H-002-273</small></span>
           <span class="l-ja">トランスナショナル・ガバナンスと国家能力：グリーンファイナンスの比較研究<small>研究代表者 · NSTC 111-2410-H-002-273</small></span>
+          <span class="l-ko">초국적 거버넌스와 국가 능력: 그린파이낸스의 비교 연구<small>연구책임자 · NSTC 111-2410-H-002-273</small></span>
         </span></li>
         <li><span class="yr">&nbsp;</span><span class="what">
           <span class="l-en">Multiple and Just Net-Zero Transitions throughout International Supply Chains<small>Research team member</small></span>
           <span class="l-zh">國際供應鏈中的多重與公正淨零轉型<small>研究團隊成員</small></span>
           <span class="l-ja">国際サプライチェーンにおける多元的で公正なネットゼロ移行<small>研究メンバー</small></span>
+          <span class="l-ko">국제 공급망에서의 다중적이고 정의로운 넷제로 전환<small>연구팀원</small></span>
         </span></li>
       </ul>
     </section>
 
     <section id="publications">
-      <h2><span class="l-en">Publications</span><span class="l-zh">著作</span><span class="l-ja">業績</span></h2>
+      <h2><span class="l-en">Publications</span><span class="l-zh">著作</span><span class="l-ja">業績</span><span class="l-ko">연구업적</span></h2>
 
-      <h3><span class="l-en">Peer-Reviewed Articles</span><span class="l-zh">期刊論文</span><span class="l-ja">査読付き論文</span></h3>
+      <h3><span class="l-en">Peer-Reviewed Articles</span><span class="l-zh">期刊論文</span><span class="l-ja">査読付き論文</span><span class="l-ko">학술지 논문</span></h3>
       <ol class="pubs" reversed>
         <li>
           <span class="l-en">
@@ -395,6 +420,11 @@ footer{margin-top:40px;font-size:13px;color:var(--faint)}
             <span class="authors"><b>林竣達</b>（掲載決定）</span>
             <span class="title">国家資本主義とグリーンファイナンスの発展：中国・日本・韓国の比較研究</span>
             <span class="venue">『台湾政治学刊』30(2)<span class="tag">中国語</span></span>
+          </span>
+          <span class="l-ko">
+            <span class="authors"><b>린쥔다</b>（게재 확정）</span>
+            <span class="title">국가자본주의와 그린파이낸스의 발전: 중국·일본·한국의 비교 연구</span>
+            <span class="venue">《台灣政治學刊》, 30(2)<span class="tag">중국어</span></span>
           </span>
         </li>
         <li>
@@ -433,6 +463,11 @@ footer{margin-top:40px;font-size:13px;color:var(--faint)}
             <span class="title"><a href="https://www.airitilibrary.com/Article/Detail/15601696-N202506050002-00002" target="_blank" rel="noopener">米中競争下におけるグレーゾーンの理論と実践</a></span>
             <span class="venue">『遠景基金会季刊』26(2)、53&ndash;111<span class="tag">中国語</span></span>
           </span>
+          <span class="l-ko">
+            <span class="authors">라오링쉬안·<b>린쥔다</b>（2025）</span>
+            <span class="title"><a href="https://www.airitilibrary.com/Article/Detail/15601696-N202506050002-00002" target="_blank" rel="noopener">미·중 경쟁 하 회색지대의 이론과 실천</a></span>
+            <span class="venue">《遠景基金會季刊》, 26(2), 53&ndash;111<span class="tag">중국어</span></span>
+          </span>
         </li>
         <li>
           <span class="authors"><b>Jiun-Da Lin</b> (2024)</span>
@@ -465,6 +500,11 @@ footer{margin-top:40px;font-size:13px;color:var(--faint)}
             <span class="title"><a href="https://www.rchss.sinica.edu.tw/jssp/journals/1661" target="_blank" rel="noopener">揺らぎつつも倒れず：トランプ政権下におけるオバマケアの発展</a></span>
             <span class="venue">『人文及社会科学集刊』33(4)、567&ndash;617<span class="tag">中国語</span></span>
           </span>
+          <span class="l-ko">
+            <span class="authors">황팡이·<b>린쥔다</b>（2021）</span>
+            <span class="title"><a href="https://www.rchss.sinica.edu.tw/jssp/journals/1661" target="_blank" rel="noopener">흔들렸지만 쓰러지지 않았다: 트럼프 행정부 하 오바마케어의 발전</a></span>
+            <span class="venue">《人文及社會科學集刊》, 33(4), 567&ndash;617<span class="tag">중국어</span></span>
+          </span>
         </li>
         <li>
           <span class="l-en">
@@ -481,6 +521,11 @@ footer{margin-top:40px;font-size:13px;color:var(--faint)}
             <span class="authors"><b>林竣達</b>（2021）</span>
             <span class="title"><a href="https://wenti.nccu.edu.tw/upload/%E5%BE%9E%E7%A7%81%E6%AC%8A%E5%A8%81%E8%A7%80%E9%BB%9E%E7%9C%8B%E8%87%AA%E9%A1%98%E6%80%A7%E5%85%A8%E7%90%83%E6%A8%99%E6%BA%96%E7%9A%84%E7%99%BC%E5%B1%95.pdf" target="_blank" rel="noopener">私的権威の観点から見る自発的グローバル・スタンダードの発展</a></span>
             <span class="venue">『問題与研究』60(3)、74&ndash;114<span class="tag">中国語</span></span>
+          </span>
+          <span class="l-ko">
+            <span class="authors"><b>린쥔다</b>（2021）</span>
+            <span class="title"><a href="https://wenti.nccu.edu.tw/upload/%E5%BE%9E%E7%A7%81%E6%AC%8A%E5%A8%81%E8%A7%80%E9%BB%9E%E7%9C%8B%E8%87%AA%E9%A1%98%E6%80%A7%E5%85%A8%E7%90%83%E6%A8%99%E6%BA%96%E7%9A%84%E7%99%BC%E5%B1%95.pdf" target="_blank" rel="noopener">사적 권위의 관점에서 본 자발적 글로벌 표준의 발전</a></span>
+            <span class="venue">《問題與研究》, 60(3), 74&ndash;114<span class="tag">중국어</span></span>
           </span>
         </li>
         <li>
@@ -499,6 +544,11 @@ footer{margin-top:40px;font-size:13px;color:var(--faint)}
             <span class="title"><a href="https://www.airitilibrary.com/Article/Detail?DocID=17269350-202009-202104010030-202104010030-1-49" target="_blank" rel="noopener">新型コロナウイルスに対する米国市民の防疫選好と行動──感情的分極化と情報源による説明</a></span>
             <span class="venue">『台湾民主季刊』17(3)、1&ndash;49<span class="tag">中国語</span></span>
           </span>
+          <span class="l-ko">
+            <span class="authors">황팡이·<b>린쥔다</b>（2020）</span>
+            <span class="title"><a href="https://www.airitilibrary.com/Article/Detail?DocID=17269350-202009-202104010030-202104010030-1-49" target="_blank" rel="noopener">코로나19에 대한 미국 시민의 방역 선호와 행동: 감정적 양극화와 정보원에 의한 설명</a></span>
+            <span class="venue">《臺灣民主季刊》, 17(3), 1&ndash;49<span class="tag">중국어</span></span>
+          </span>
         </li>
         <li>
           <span class="authors">Jong-sung You and <b>Jiun-Da Lin</b> (2020)</span>
@@ -507,7 +557,7 @@ footer{margin-top:40px;font-size:13px;color:var(--faint)}
         </li>
       </ol>
 
-      <h3><span class="l-en">Book Chapters</span><span class="l-zh">專書章節</span><span class="l-ja">著書（分担執筆）</span></h3>
+      <h3><span class="l-en">Book Chapters</span><span class="l-zh">專書章節</span><span class="l-ja">著書（分担執筆）</span><span class="l-ko">단행본 챕터</span></h3>
       <ol class="pubs" reversed>
         <li>
           <span class="l-en">
@@ -524,6 +574,11 @@ footer{margin-top:40px;font-size:13px;color:var(--faint)}
             <span class="authors">饒聆瑄・<b>林竣達</b>（2026）</span>
             <span class="title">権力移行、脅威認識と中国の台湾海峡グレーゾーン戦略</span>
             <span class="venue">蔡東杰・加茂具樹編『習近平時代における中国党政体制の発展』台北：五南<span class="tag">中国語</span></span>
+          </span>
+          <span class="l-ko">
+            <span class="authors">라오링쉬안·<b>린쥔다</b>（2026）</span>
+            <span class="title">권력 이행, 위협 인식과 중국의 대만해협 회색지대 전략</span>
+            <span class="venue">蔡東杰·加茂具樹 편, 《習近平時期中國黨政體制發展》. 타이베이: 五南<span class="tag">중국어</span></span>
           </span>
         </li>
         <li>
@@ -547,6 +602,11 @@ footer{margin-top:40px;font-size:13px;color:var(--faint)}
             <span class="title">国家アイデンティティとグローバル化への態度：台湾の事例分析</span>
             <span class="venue">『台湾社会変遷基本調査計画成果叢書シリーズ4』<span class="tag">中国語</span></span>
           </span>
+          <span class="l-ko">
+            <span class="authors"><b>린쥔다</b>·황팡이（게재 확정）</span>
+            <span class="title">국가 정체성과 세계화에 대한 태도: 대만 사례 분석</span>
+            <span class="venue">《台灣社會變遷基本調查計畫成果叢書系列四》<span class="tag">중국어</span></span>
+          </span>
         </li>
         <li>
           <span class="authors"><b>Jiun-Da Lin</b> (2024)</span>
@@ -569,12 +629,17 @@ footer{margin-top:40px;font-size:13px;color:var(--faint)}
             <span class="title">私的権威の観点から見る自発的グローバル・スタンダードの発展</span>
             <span class="venue">林義鈞編『非伝統的安全保障：ガバナンスの様相と政治体制』高雄：巨流<span class="tag">中国語</span></span>
           </span>
+          <span class="l-ko">
+            <span class="authors"><b>린쥔다</b>（2023）</span>
+            <span class="title">사적 권위의 관점에서 본 자발적 글로벌 표준의 발전</span>
+            <span class="venue">林義鈞 편, 《非傳統安全：治理面貌與政治體制》. 가오슝: 巨流<span class="tag">중국어</span></span>
+          </span>
         </li>
       </ol>
     </section>
 
     <section id="commentary">
-      <h2><span class="l-en">Policy Commentary</span><span class="l-zh">政策評論</span><span class="l-ja">政策コラム</span></h2>
+      <h2><span class="l-en">Policy Commentary</span><span class="l-zh">政策評論</span><span class="l-ja">政策コラム</span><span class="l-ko">정책평론</span></h2>
       <ol class="pubs" reversed>
         <li>
           <span class="l-en">
@@ -591,6 +656,11 @@ footer{margin-top:40px;font-size:13px;color:var(--faint)}
             <span class="authors"><b>林竣達</b>（2026）</span>
             <span class="title">地政学下における中国共産党の地域経済統合戦略：中国・ASEAN自由貿易区3.0を例として</span>
             <span class="venue">『中共年報』2-114&ndash;2-124<span class="tag">中国語</span></span>
+          </span>
+          <span class="l-ko">
+            <span class="authors"><b>린쥔다</b>（2026）</span>
+            <span class="title">지정학 하 중국공산당의 지역경제통합 전략: 중국-아세안 자유무역지대 3.0을 사례로</span>
+            <span class="venue">《中共年報》, 2-114&ndash;2-124<span class="tag">중국어</span></span>
           </span>
         </li>
         <li>
@@ -609,6 +679,11 @@ footer{margin-top:40px;font-size:13px;color:var(--faint)}
             <span class="title">中国国家集積回路産業投資基金の発展と課題</span>
             <span class="venue">『中国大陸研究教学通訊』(155)<span class="tag">中国語</span></span>
           </span>
+          <span class="l-ko">
+            <span class="authors">천쉬안윈·<b>린쥔다</b>（2025）</span>
+            <span class="title">중국 국가집적회로산업투자기금의 발전과 과제</span>
+            <span class="venue">《中國大陸研究教學通訊》, (155)<span class="tag">중국어</span></span>
+          </span>
         </li>
         <li>
           <span class="l-en">
@@ -625,6 +700,11 @@ footer{margin-top:40px;font-size:13px;color:var(--faint)}
             <span class="authors"><b>林竣達</b>（2025）</span>
             <span class="title">トランプ2.0の新情勢下における中国の対外発展戦略</span>
             <span class="venue">『中共研究』59(3)<span class="tag">中国語</span></span>
+          </span>
+          <span class="l-ko">
+            <span class="authors"><b>린쥔다</b>（2025）</span>
+            <span class="title">트럼프 2.0 새 정세 하 중국의 대외 발전 전략</span>
+            <span class="venue">《中共研究》, 59(3)<span class="tag">중국어</span></span>
           </span>
         </li>
         <li>
@@ -648,6 +728,11 @@ footer{margin-top:40px;font-size:13px;color:var(--faint)}
             <span class="title">中国が直面する経済発展の困難の制度的根源</span>
             <span class="venue">『中共研究』58(3)<span class="tag">中国語</span></span>
           </span>
+          <span class="l-ko">
+            <span class="authors"><b>린쥔다</b>（2024）</span>
+            <span class="title">중국이 직면한 경제발전 곤경의 제도적 근원</span>
+            <span class="venue">《中共研究》, 58(3)<span class="tag">중국어</span></span>
+          </span>
         </li>
         <li>
           <span class="l-en">
@@ -664,6 +749,11 @@ footer{margin-top:40px;font-size:13px;color:var(--faint)}
             <span class="authors"><b>林竣達</b>（2024）</span>
             <span class="title">中国グリーン産業のグローバル展開と発展のジレンマ</span>
             <span class="venue">『展望与探索』22(8)<span class="tag">中国語</span></span>
+          </span>
+          <span class="l-ko">
+            <span class="authors"><b>린쥔다</b>（2024）</span>
+            <span class="title">중국 그린 산업의 글로벌 확장과 발전 딜레마</span>
+            <span class="venue">《展望與探索》, 22(8)<span class="tag">중국어</span></span>
           </span>
         </li>
         <li>
@@ -682,6 +772,11 @@ footer{margin-top:40px;font-size:13px;color:var(--faint)}
             <span class="title">カーボンプライシング時代の到来：企業の課題と対応</span>
             <span class="venue">『交流雑誌』(194)<span class="tag">中国語</span></span>
           </span>
+          <span class="l-ko">
+            <span class="authors"><b>린쥔다</b>（2024）</span>
+            <span class="title">탄소 가격 시대의 도래: 기업의 도전과 대응</span>
+            <span class="venue">《交流雜誌》, (194)<span class="tag">중국어</span></span>
+          </span>
         </li>
         <li>
           <span class="l-en">
@@ -698,6 +793,11 @@ footer{margin-top:40px;font-size:13px;color:var(--faint)}
             <span class="authors"><b>林竣達</b>（2024）</span>
             <span class="title">中国共産党による民営経済支援の現状に関する考察</span>
             <span class="venue">『交流雑誌』(193)<span class="tag">中国語</span></span>
+          </span>
+          <span class="l-ko">
+            <span class="authors"><b>린쥔다</b>（2024）</span>
+            <span class="title">중국공산당의 민영경제 지원 추진에 대한 관찰</span>
+            <span class="venue">《交流雜誌》, (193)<span class="tag">중국어</span></span>
           </span>
         </li>
         <li>
@@ -716,6 +816,11 @@ footer{margin-top:40px;font-size:13px;color:var(--faint)}
             <span class="title">グローバル気候ファイナンスの発展の現状</span>
             <span class="venue">『国際開発援助現場季刊』(14)、9&ndash;14<span class="tag">中国語</span></span>
           </span>
+          <span class="l-ko">
+            <span class="authors"><b>린쥔다</b>（2023）</span>
+            <span class="title">글로벌 기후금융의 발전 현황</span>
+            <span class="venue">《國際開發援助現場季刊》, (14), 9&ndash;14<span class="tag">중국어</span></span>
+          </span>
         </li>
         <li>
           <span class="l-en">
@@ -733,51 +838,59 @@ footer{margin-top:40px;font-size:13px;color:var(--faint)}
             <span class="title">グリーンボンド：気候危機の解決策か？</span>
             <span class="venue">『鉅変新視界電子報』(46)<span class="tag">中国語</span></span>
           </span>
+          <span class="l-ko">
+            <span class="authors"><b>린쥔다</b>（2023）</span>
+            <span class="title">그린본드: 기후 위기의 해법인가?</span>
+            <span class="venue">《鉅變新視界電子報》, (46)<span class="tag">중국어</span></span>
+          </span>
         </li>
       </ol>
 
-      <h3><span class="l-en">In the Media</span><span class="l-zh">媒體報導</span><span class="l-ja">メディア掲載</span></h3>
+      <h3><span class="l-en">In the Media</span><span class="l-zh">媒體報導</span><span class="l-ja">メディア掲載</span><span class="l-ko">미디어 보도</span></h3>
       <ul class="rows">
         <li><span class="yr">&nbsp;</span><span class="what">
           <span class="l-en">NTU Risk Center Survey: The Public Embraces Green Jobs with Optimism &mdash; How Can the Government Keep Hope from Turning into Disappointment?<small>Environmental Information Center (in Mandarin)</small></span>
           <span class="l-zh">台大風險中心調查：民眾樂觀迎向綠色職缺　政府如何不把希望變失望？<small>環境資訊中心</small></span>
           <span class="l-ja">台湾大学リスクセンター調査：市民はグリーン雇用に楽観的 &mdash; 政府は希望を失望に変えないために<small>環境資訊センター（中国語）</small></span>
+          <span class="l-ko">타이완대학 리스크센터 조사: 시민들은 그린 일자리를 낙관적으로 전망 &mdash; 정부는 희망이 실망으로 바뀌지 않게 하려면?<small>환경정보센터(環境資訊中心) · 중국어</small></span>
         </span></li>
         <li><span class="yr">&nbsp;</span><span class="what">
           <span class="l-en">NTU Net-Zero Poll: 90% of the Public Feel the Effects of Climate Change; 80% Are Willing to Pay Higher Electricity Bills<small>Environmental Information Center (in Mandarin)</small></span>
           <span class="l-zh">台大淨零民調：九成民眾有感氣候變遷　八成願多付電費<small>環境資訊中心</small></span>
           <span class="l-ja">台湾大学ネットゼロ世論調査：9割が気候変動を実感、8割が電気料金の追加負担に前向き<small>環境資訊センター（中国語）</small></span>
+          <span class="l-ko">타이완대학 넷제로 여론조사: 90%가 기후변화를 체감, 80%는 전기요금 추가 부담 의향<small>환경정보센터(環境資訊中心) · 중국어</small></span>
         </span></li>
       </ul>
     </section>
 
     <section id="teaching">
-      <h2><span class="l-en">Teaching</span><span class="l-zh">教學</span><span class="l-ja">担当科目</span></h2>
-      <h3><span class="l-en">National Taiwan University</span><span class="l-zh">國立臺灣大學</span><span class="l-ja">国立台湾大学</span></h3>
+      <h2><span class="l-en">Teaching</span><span class="l-zh">教學</span><span class="l-ja">担当科目</span><span class="l-ko">강의</span></h2>
+      <h3><span class="l-en">National Taiwan University</span><span class="l-zh">國立臺灣大學</span><span class="l-ja">国立台湾大学</span><span class="l-ko">국립타이완대학</span></h3>
       <ul class="rows">
-        <li><span class="yr">2022–2026</span><span class="what"><span class="l-en">Seminar on China and Global Climate Governance</span><span class="l-zh">中國與全球氣候治理專題</span><span class="l-ja">中国とグローバル気候ガバナンス演習</span></span></li>
-        <li><span class="yr">2022–2026</span><span class="what"><span class="l-en">Globalization and Transnational Governance</span><span class="l-zh">全球化與跨國治理</span><span class="l-ja">グローバリゼーションとトランスナショナル・ガバナンス</span></span></li>
-        <li><span class="yr">2022–2025</span><span class="what"><span class="l-en">Seminar on China&ndash;US Relations and Global Governance</span><span class="l-zh">中美關係與全球治理專題</span><span class="l-ja">米中関係とグローバル・ガバナンス演習</span></span></li>
-        <li><span class="yr">2022–2026</span><span class="what"><span class="l-en">Sustainable Finance and ESG</span><span class="l-zh">永續金融與 ESG</span><span class="l-ja">サステナブルファイナンスと ESG</span></span></li>
-        <li><span class="yr">2023–2026</span><span class="what"><span class="l-en">Seminar on Research Methods in Social Sciences</span><span class="l-zh">社會科學研究方法專題</span><span class="l-ja">社会科学研究方法演習</span></span></li>
-        <li><span class="yr">2024–2025</span><span class="what"><span class="l-en">Seminar on Environmental Governance</span><span class="l-zh">環境治理專題</span><span class="l-ja">環境ガバナンス演習</span></span></li>
-        <li><span class="yr">2022</span><span class="what"><span class="l-en">Seminar on Chinese State Capitalism</span><span class="l-zh">中國國家資本主義專題</span><span class="l-ja">中国国家資本主義演習</span></span></li>
+        <li><span class="yr">2022–2026</span><span class="what"><span class="l-en">Seminar on China and Global Climate Governance</span><span class="l-zh">中國與全球氣候治理專題</span><span class="l-ja">中国とグローバル気候ガバナンス演習</span><span class="l-ko">중국과 글로벌 기후 거버넌스 세미나</span></span></li>
+        <li><span class="yr">2022–2026</span><span class="what"><span class="l-en">Globalization and Transnational Governance</span><span class="l-zh">全球化與跨國治理</span><span class="l-ja">グローバリゼーションとトランスナショナル・ガバナンス</span><span class="l-ko">세계화와 초국적 거버넌스</span></span></li>
+        <li><span class="yr">2022–2025</span><span class="what"><span class="l-en">Seminar on China&ndash;US Relations and Global Governance</span><span class="l-zh">中美關係與全球治理專題</span><span class="l-ja">米中関係とグローバル・ガバナンス演習</span><span class="l-ko">미중 관계와 글로벌 거버넌스 세미나</span></span></li>
+        <li><span class="yr">2022–2026</span><span class="what"><span class="l-en">Sustainable Finance and ESG</span><span class="l-zh">永續金融與 ESG</span><span class="l-ja">サステナブルファイナンスと ESG</span><span class="l-ko">지속가능금융과 ESG</span></span></li>
+        <li><span class="yr">2023–2026</span><span class="what"><span class="l-en">Seminar on Research Methods in Social Sciences</span><span class="l-zh">社會科學研究方法專題</span><span class="l-ja">社会科学研究方法演習</span><span class="l-ko">사회과학 연구방법 세미나</span></span></li>
+        <li><span class="yr">2024–2025</span><span class="what"><span class="l-en">Seminar on Environmental Governance</span><span class="l-zh">環境治理專題</span><span class="l-ja">環境ガバナンス演習</span><span class="l-ko">환경 거버넌스 세미나</span></span></li>
+        <li><span class="yr">2022</span><span class="what"><span class="l-en">Seminar on Chinese State Capitalism</span><span class="l-zh">中國國家資本主義專題</span><span class="l-ja">中国国家資本主義演習</span><span class="l-ko">중국 국가자본주의 세미나</span></span></li>
       </ul>
-      <h3><span class="l-en">University of Maryland, College Park</span><span class="l-zh">美國馬里蘭大學</span><span class="l-ja">メリーランド大学カレッジパーク校</span></h3>
+      <h3><span class="l-en">University of Maryland, College Park</span><span class="l-zh">美國馬里蘭大學</span><span class="l-ja">メリーランド大学カレッジパーク校</span><span class="l-ko">메릴랜드대학교 칼리지파크</span></h3>
       <ul class="rows">
-        <li><span class="yr">2019</span><span class="what"><span class="l-en">International Political Relations <small>Instructor</small></span><span class="l-zh">國際政治關係<small>授課教師</small></span><span class="l-ja">国際政治関係<small>担当教員</small></span></span></li>
+        <li><span class="yr">2019</span><span class="what"><span class="l-en">International Political Relations <small>Instructor</small></span><span class="l-zh">國際政治關係<small>授課教師</small></span><span class="l-ja">国際政治関係<small>担当教員</small></span><span class="l-ko">국제정치관계<small>담당 강사</small></span></span></li>
         <li><span class="yr">2016–2019</span><span class="what">
           <span class="l-en">Teaching assistant<small>Politics and the Developing World &middot; Introduction to Environmental Politics &middot; International Negotiations &middot; Appetite for Change: Politics and the Globalization of Food</small></span>
           <span class="l-zh">教學助理<small>Politics and the Developing World &middot; Introduction to Environmental Politics &middot; International Negotiations &middot; Appetite for Change: Politics and the Globalization of Food</small></span>
           <span class="l-ja">ティーチング・アシスタント<small>Politics and the Developing World &middot; Introduction to Environmental Politics &middot; International Negotiations &middot; Appetite for Change: Politics and the Globalization of Food</small></span>
+          <span class="l-ko">교육조교(TA)<small>Politics and the Developing World &middot; Introduction to Environmental Politics &middot; International Negotiations &middot; Appetite for Change: Politics and the Globalization of Food</small></span>
         </span></li>
       </ul>
     </section>
 
     <section id="advising">
-      <h2><span class="l-en">Advising</span><span class="l-zh">學生指導</span><span class="l-ja">学生指導</span></h2>
+      <h2><span class="l-en">Advising</span><span class="l-zh">學生指導</span><span class="l-ja">学生指導</span><span class="l-ko">학생 지도</span></h2>
 
-      <h3><span class="l-en">Thesis &amp; Dissertation Advising</span><span class="l-zh">論文指導</span><span class="l-ja">論文指導</span></h3>
+      <h3><span class="l-en">Thesis &amp; Dissertation Advising</span><span class="l-zh">論文指導</span><span class="l-ja">論文指導</span><span class="l-ko">논문 지도</span></h3>
       <p>
         <span class="l-en">
           I welcome inquiries from students whose projects have a strong substantive fit
@@ -796,9 +909,13 @@ footer{margin-top:40px;font-size:13px;color:var(--faint)}
           研究テーマが私の研究分野と強く合致する学生からの相談を歓迎します。指導を希望する学生は、期末レポートまたは研究論文を課す私の授業を履修し、A
           以上の成績を得ていることが必要です。希望者は、研究テーマの概要と、なぜ私が適切な指導教員であるかの説明をメールでお送りください。指導学生数が多い場合は、お断りすることがあります。
         </span>
+        <span class="l-ko">
+          연구 주제가 저의 연구 분야와 밀접하게 부합하는 학생들의 문의를 환영합니다. 지도를 희망하는 학생은 기말 에세이 또는 연구보고서를 요구하는 저의 수업을 수강하고 A
+          이상의 성적을 받았어야 합니다. 지도를 원하시는 분은 연구 주제 구상을 간략히 정리하고, 왜 제가 적합한 지도교수인지에 대한 설명과 함께 이메일로 보내주시기 바랍니다. 지도 학생 수가 많은 경우 부득이 거절할 수 있습니다.
+        </span>
       </p>
 
-      <h3><span class="l-en">Letters of Recommendation</span><span class="l-zh">推薦信</span><span class="l-ja">推薦状</span></h3>
+      <h3><span class="l-en">Letters of Recommendation</span><span class="l-zh">推薦信</span><span class="l-ja">推薦状</span><span class="l-ko">추천서</span></h3>
       <p>
         <span class="l-en">
           To request a letter, you should have completed one of my courses with a final
@@ -821,6 +938,11 @@ footer{margin-top:40px;font-size:13px;color:var(--faint)}
           回参加し、推薦状を読む権利を放棄していることが必要です。依頼の際には、当該授業の期末レポート、最新の履歴書または
           CV、非公式の成績証明書、志望理由書の草稿を併せてお送りください。締切数日前のリマインドメールは歓迎します。
         </span>
+        <span class="l-ko">
+          추천서를 요청하려면, 기말 에세이 또는 연구보고서를 요구하는 저의 수업을 A
+          이상의 성적으로 이수하고, 마감일로부터 최소 한 달 전에 연락하며, 오피스아워에 최소 한 번 참석하고, 추천서를 열람할 권리를 포기해야 합니다. 요청 시 해당 수업의 기말 보고서, 최신 이력서 또는
+          CV, 비공식 성적증명서, 지원 에세이 또는 자기소개서 초안을 함께 보내주시기 바랍니다. 마감 며칠 전의 리마인드 메일은 환영합니다.
+        </span>
       </p>
     </section>
 
@@ -828,7 +950,7 @@ footer{margin-top:40px;font-size:13px;color:var(--faint)}
 
 
     <section id="contact">
-      <h2><span class="l-en">Contact</span><span class="l-zh">聯絡方式</span><span class="l-ja">連絡先</span></h2>
+      <h2><span class="l-en">Contact</span><span class="l-zh">聯絡方式</span><span class="l-ja">連絡先</span><span class="l-ko">연락처</span></h2>
       <address>
         <span class="l-en">
           Graduate Institute of National Development<br>
@@ -843,6 +965,10 @@ footer{margin-top:40px;font-size:13px;color:var(--faint)}
         <span class="l-ja">
           〒10617 台北市大安区羅斯福路四段1号<br>
           国立台湾大学 国家発展研究所<br><br>
+        </span>
+        <span class="l-ko">
+          10617 타이완 타이베이시 다안구 뤄쓰푸루 4단 1호<br>
+          국립타이완대학 국가발전연구소<br><br>
         </span>
         <a href="mailto:jdlin0510@ntu.edu.tw">jdlin0510@ntu.edu.tw</a><br>
         +886-2-3366-3345
@@ -862,7 +988,7 @@ footer{margin-top:40px;font-size:13px;color:var(--faint)}
         document.documentElement.lang='en';
       }else{
         document.documentElement.setAttribute('data-lang',v);
-        document.documentElement.lang=(v==='zh'?'zh-Hant':'ja');
+        document.documentElement.lang=(v==='zh'?'zh-Hant':v);
       }
       try{localStorage.setItem('lang',v)}catch(e){}
     });
